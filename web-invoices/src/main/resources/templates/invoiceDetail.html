@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <title>detail de la facture</title>
+</head>
+<body>
+<h1>Les detailles de la facture selectionner </h1>
+
+<h3>  Billing Number : <span th:text="${invoice.number}"/> </h3>
+<h3>  Custumer Name : <span th:text="${invoice.custumerName}"/> </h3>
+<h3>  Order Number : <span th:text="${invoice.orderNumber}"/> </h3>
+
+</body>
+</html>

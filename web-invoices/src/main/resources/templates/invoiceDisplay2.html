@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>gestion de facture </title>
+    <h1>avec cette page on retourne une liste invoice directement dans le type de retour de la methode , spring s'occupe du reste " displayBySpring " </h1>
+
+    <h3>Action disponible</h3>
+
+    <ul>
+        <li><a href="https://example.com">Ajout de facture</a></li>
+    </ul>
+
+    <table border="2">
+        <tr th:each="listInvoice : ${listInvoices}">
+            <td >
+                <a th:href="/invoice/${listInvoice.number}" th:text="${listInvoice.number}" />
+            </td>
+            <td th:text="${listInvoice.custumerName}">
+            </td>
+        </tr>
+    </table>
+</head>
+<body>
+
+</body>
+</html>
